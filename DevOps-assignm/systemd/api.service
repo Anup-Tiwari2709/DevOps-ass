@@ -1,0 +1,13 @@
+[Unit]
+Description=Quickstart API gateway
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/quickstart/api_server.py
+WorkingDirectory=/opt/quickstart
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

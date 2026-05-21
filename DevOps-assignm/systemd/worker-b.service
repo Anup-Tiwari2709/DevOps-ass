@@ -1,0 +1,13 @@
+[Unit]
+Description=Quickstart Worker B (TypeScript)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/env ts-node /opt/quickstart/worker_b.ts
+WorkingDirectory=/opt/quickstart
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

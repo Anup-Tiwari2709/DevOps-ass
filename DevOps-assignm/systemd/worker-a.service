@@ -1,0 +1,13 @@
+[Unit]
+Description=Quickstart Worker A (Python)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/quickstart/worker_a.py
+WorkingDirectory=/opt/quickstart
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
